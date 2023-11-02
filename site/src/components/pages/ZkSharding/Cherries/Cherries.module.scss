@@ -1,0 +1,115 @@
+@use '~styles/colors' as *;
+@use '~styles/helpers' as *;
+@use '~styles/typography' as *;
+@use '~styles/mixins' as *;
+@use '~styles/paddings' as *;
+
+.root {
+  display: flex;
+  align-items: flex-start;
+
+  margin-bottom: size(77);
+
+  @include mobile {
+    flex-direction: column;
+
+    margin-bottom: 0;
+  }
+}
+
+.left {
+  flex-basis: size(551);
+  flex-shrink: 0;
+}
+
+.left,
+.right {
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.right {
+  width: 50%;
+  margin-top: size(92);
+
+  @include mobile {
+    margin-top: 0;
+  }
+}
+
+.content {
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // flex-wrap: wrap;
+  background-color: $gray900;
+
+  // padding-bottom: size($spacing32);
+
+  // @include mobile {
+  //   padding-top: size(40);
+  // }
+}
+
+.box {
+  display: flex;
+
+  gap: size($spacing32);
+
+  padding: size($spacing32);
+
+  &:not(:last-of-type) {
+    margin-bottom: size($spacing64);
+  }
+
+  @include paragraph;
+
+  @include mobile {
+    padding: size(20) size(10);
+
+    &:not(:last-of-type) {
+      margin-bottom: size(10);
+    }
+  }
+}
+
+.title {
+  @include heading-03;
+
+  flex-basis: size(219);
+
+  flex-shrink: 0;
+}
+
+.description {
+  color: $grey;
+}
+
+.heading {
+  min-height: unset;
+
+  padding-top: size(calc($spacing32 - 10));
+
+  padding-bottom: size(calc($spacing32 + 4));
+
+  p {
+    @include heading-04;
+
+    margin-top: size($spacing32 + 6);
+
+    max-width: initial;
+  }
+}
+
+.rightHeader {
+  display: flex;
+
+  & > div {
+    flex-basis: 50%;
+    background-color: $gray900;
+  }
+
+  & > div:nth-child(2) {
+    margin-top: size(30);
+  }
+}

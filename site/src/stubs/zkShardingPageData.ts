@@ -1,127 +1,115 @@
 export const zkShardingPageData = {
-  hero: {
-    title: 'Scale starting at 60,000 TPS',
-    description:
-      'By implementing dynamic zkSharding, =nil; enables secure parallel execution of transactions across shards operating independently. ',
-    info: 'As the number of these dedicated shards grows, so does the maximum Ethereum throughput, linearly.',
-    list: [
-      `Compile circuits from existing code, don't start from scratch`,
-      'Superior circuit performance with no zkVMs involved',
-      'Eliminates the need for custom zero-knowledge DSLs',
-      'Effortless ongoing maintenance of circuits',
-      'Proves C++, Rust, and other mainstream languages',
-      'Speeds up proof generation with hardware acceleration',
-    ],
-  },
-  accelerating: {
-    title: 'Accelerating provable computation deployment',
-    description:
-      'zkLLVM streamlines circuit definition for both established and emerging zk use cases, ensuring rapid technology adoption.',
-    content: [
-      {
-        icon: 'rollup',
-        title: 'Rollups',
-        description: 'Cutting costs and boosting Ethereum transactions',
-        link: '/',
-      },
-      {
-        icon: 'bridges',
-        title: 'Bridges',
-        description: 'Securing cross-protocol transactions to prevent fraud',
-        link: '/',
-      },
-      {
-        icon: 'oracles',
-        title: 'Oracles',
-        description: 'Verified in-EVM data and computations over it',
-        link: '/',
-      },
-      {
-        icon: 'ml',
-        title: 'ML',
-        description: 'Providing transparency to ML models',
-        link: '/',
-      },
-      {
-        icon: 'gaming',
-        title: 'Gaming',
-        description: 'Proving in-game progress and achievements',
-        link: '/',
-      },
-    ],
-    footer: {
-      text: 'See documentation',
-      link: 'https://docs.nil.foundation/zkllvm',
-    },
-  },
-  zkProof: {
-    title: 'Why building zk-enabled apps',
-    content: [
-      {
-        title: 'Lower execution costs',
-        icon: 'arrow-in-circle',
-        description:
-          'Leveraging zero-knowledge technology greatly reduces execution costs for in-EVM and other on-chain L1/L2 operations.',
-      },
-      {
-        title: 'Boost data throughput',
-        icon: 'lightning',
-        description:
-          'Proving computations with zero-knowledge increases protocol capacity and significantly cuts average time required to process an operation.',
-      },
-      {
-        title: 'Enhance privacy and security',
-        icon: 'key',
-        description:
-          'Zero-knowledge technology lets applications selectively share data with third parties, ensuring privacy without sacrificing the security and trust of your users.',
-      },
-    ],
-  },
-  fullCycle: {
-    title: 'Full cycle solution for creating zk-enabled Ethereum apps',
-    description: `In tandem with Proof Market, our decentralized marketplace for zkProof generation, zkLLVM provides end-to-end support for your application's lifecycle.`,
-    list: [
-      {
-        title: 'Fast-track proof generation setup',
-        description:
-          '=nil; toolchain establishes quick and robust proof generation pipeline, reducing time to market for zk-enabled apps.',
-      },
-      {
-        title: 'Cost-effective decentralized proof generation',
-        description: `Take advantage of an efficient decentralized proof generation process, reducing each proof's operational costs with zkLLVM circuits.`,
-      },
-      {
-        title: 'Incentives for circuit developers',
-        description: 'Developers get rewards for adding new circuits that gain demand.',
-      },
-    ],
-    footer: {
-      text: 'Discover Proof Market',
-      link: '/',
-    },
-  },
-  joinNil: {
-    title: 'Join =nil; community for expert help',
-    social: 'community',
-    content: {
-      left: `Whether you're a seasoned developer or a zk enthusiast taking your first steps, we've got your back!`,
-      right:
-        'Join our fast-growing community to collaborate with experienced engineers ready to share their expertise on decentralized proof generation.',
-    },
-  },
-  about: {
-    title: 'About =nil;',
-    social: 'corporate',
-    description:
-      '=nil; Foundation is a pioneer in zero-knowledge technology dedicated to making zkProofs more accessible for developers.',
-    button: {
-      text: 'Learn more',
-      link: '/about',
-    },
-  },
-}
+	hero: {
+		title: "Scale starting at 60,000 TPS",
+		description:
+			"By implementing dynamic zkSharding, =nil; enables secure parallel execution of transactions across shards operating independently. ",
+		info: "As the number of these dedicated shards grows, so does the maximum Ethereum throughput, linearly.",
+		list: [
+			`Compile circuits from existing code, don't start from scratch`,
+			"Superior circuit performance with no zkVMs involved",
+			"Eliminates the need for custom zero-knowledge DSLs",
+			"Effortless ongoing maintenance of circuits",
+			"Proves C++, Rust, and other mainstream languages",
+			"Speeds up proof generation with hardware acceleration",
+		],
+	},
+	more: {
+		title: "More than just another zkRollup",
+		description:
+			"zkSharding facilitates scalable transaction processing and data availability, all without fragmenting liquidity or economic security.",
+		content: [
+			{
+				icon: "shield",
+			},
+		],
+
+		contentFooter:
+			"Separate decentralized shards compose a single execution layer. The main shard at the top validates transactions across all shards and proves them to Ethereum.",
+
+		footer: {
+			text: "Learn more",
+			link: "https://docs.nil.foundation/zkllvm",
+		},
+	},
+
+	secure: {
+		title: "Secure by design, safe in fact",
+		description:
+			"With great scale comes great responsibility, and =nil; offers an unparalleled security setup, ensuring safety remains at the forefront to match this commitment.",
+		content: [
+			{
+				icon: "rollup",
+				title: "zkLLVM-secured zkEVM",
+				description:
+					"Circuits, compiled automatically from C++, adhere to the precise implementation of Ethereum production-used evmone. This enables our zkEVM1 auditability and eliminates human errors in circuits.",
+				link: "/",
+			},
+			{
+				icon: "bridges",
+				title: "Decentralized from day 1",
+				description:
+					"From its launch, =nil; will be decentralized to ensure censorship resistance. As the number of nodes involved increases, Ethereum's maximal throughput scales linearly.",
+				link: "/",
+			},
+			{
+				icon: "oracles",
+				title: "Secured by restaking",
+				description:
+					"Utilizing Ethereum staking pool’s (e.g. Lido)  and applications’ TVL, we've established robust economic liveness security. This guarantees protocol state liveness and fortifies the safety of the underlying liquidity.",
+				link: "/",
+			},
+		],
+		footer: {
+			text: "See the specification",
+			link: "https://docs.nil.foundation/zkllvm",
+		},
+	},
+
+	cherries: {
+		title: "Cherries on top of the scale",
+		description:
+			"Scale alone doesn't define our vision, which aims to redefine application experiences, ensuring unparalleled capabilities to truly elevate Ethereum's potential.",
+		content: [
+			{
+				title: "Full composability at zero cost",
+				description:
+					"As all shards form integral parts of a singular execution layer, applications on =nil; will benefit from complete composability, free of security compromises or additional zkBridges fees.",
+			},
+			{
+				title: "Transparent in-EVM data access",
+				description:
+					"A shard within =nil; operates as an Ethereum full node, granting applications trustless read access to all in-EVM data — all at no charge and without the need for migration.",
+			},
+			{
+				title: "Breaking modularity’s drawbacks",
+				description:
+					"With full in-EVM data access and unified liquidity, zkSharding enhances Ethereum capabilities, contrasting the fragmented liquidity and siloed environments caused by modular zkRollups.",
+			},
+		],
+	},
+
+	joinNil: {
+		title: "Join =nil; community for expert help",
+		social: "community",
+		content: {
+			left: `Whether you're a seasoned developer or a zk enthusiast taking your first steps, we've got your back!`,
+			right:
+				"Join our fast-growing community to collaborate with experienced engineers ready to share their expertise on decentralized proof generation.",
+		},
+	},
+	about: {
+		title: "About =nil;",
+		social: "corporate",
+		description:
+			"=nil; Foundation is a pioneer in zero-knowledge technology dedicated to making zkProofs more accessible for developers.",
+		button: {
+			text: "Learn more",
+			link: "/about",
+		},
+	},
+};
 
 export const seoData = {
-  title: 'title', // todo
-  description: 'description', // todo
-}
+	title: "title", // todo
+	description: "description", // todo
+};

@@ -1,50 +1,53 @@
-import Container from 'components/Container'
-import React from 'react'
-import { zkShardingPageData } from 'stubs/zkShardingPageData'
-import Intro from './Intro'
+import Container from "components/Container";
+import React from "react";
+import { zkShardingPageData } from "stubs/zkShardingPageData";
+import Intro from "./Intro";
 
-import s from './ZkSharding.module.scss'
-import Hero from './Hero'
-import JoinNil from 'pages/Home/JoinNil'
-import About from 'pages/Home/About'
-import WhiteRectangleLine from 'components/WhiteRectangleLine'
-import { useViewport } from 'hooks/useViewport'
+import s from "./ZkSharding.module.scss";
+import Hero from "./Hero";
+import JoinNil from "pages/Home/JoinNil";
+import About from "pages/Home/About";
+import WhiteRectangleLine from "components/WhiteRectangleLine";
+import { useViewport } from "hooks/useViewport";
+import Secure from "./Secure";
+import More from "./More";
+import Cherries from "./Cherries";
 
 type Props = {
-  data: typeof zkShardingPageData
-}
+	data: typeof zkShardingPageData;
+};
 
-const mobileFooterData = [0]
+const mobileFooterData = [0];
 
-const footerData = [176, 176, 214, 0]
+const footerData = [184, 184, 214, 0];
 
-const mobileMarginTop = 62
+const mobileMarginTop = 62;
 
-const marginTop = 132
+const marginTop = 113;
 
 const ZkSharding = ({ data }: Props) => {
-  const { isMobile } = useViewport()
+	const { isMobile } = useViewport();
 
-  return (
-    <Container>
-      <Intro />
+	return (
+		<Container id="footer_nav">
+			<Intro />
 
-      <div className={s.wrapper}>
-        <div className={s.content}>
-          <Hero data={data.hero} />
-          <JoinNil data={data.joinNil} withMargin />
-          <About data={data.about} />
-          <WhiteRectangleLine
-            data={isMobile ? mobileFooterData : footerData}
-            marginTop={isMobile ? mobileMarginTop : marginTop}
-          />
-          <div id="footer_nav" />
-        </div>
-      </div>
+			<div className={s.wrapper}>
+				<div className={s.content}>
+					<Hero data={data.hero} />
+					<More data={data.more} />
+					<Secure data={data.secure} />
+					<Cherries data={data.cherries} />
+					<JoinNil data={data.joinNil} withMargin />
+					<About data={data.about} />
+					<WhiteRectangleLine
+						data={isMobile ? mobileFooterData : footerData}
+						marginTop={isMobile ? mobileMarginTop : marginTop}
+					/>
+				</div>
+			</div>
+		</Container>
+	);
+};
 
-      <div id="footer_nav" />
-    </Container>
-  )
-}
-
-export default ZkSharding
+export default ZkSharding;

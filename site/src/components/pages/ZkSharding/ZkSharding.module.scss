@@ -7,7 +7,7 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: size(259) repeat(2, size(275.5)) repeat(2, size(267));
   width: 100%;
   margin-top: size($spacing96);
 
