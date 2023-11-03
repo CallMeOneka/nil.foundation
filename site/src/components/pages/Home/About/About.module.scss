@@ -17,15 +17,19 @@
 
 .left,
 .right {
-  width: 50%;
-
   @include mobile {
     width: 100%;
   }
 }
 
+.left {
+  @include flexBasisWithAdaptiveUnset(551);
+}
+
 .right {
   position: relative;
+
+  @include flexBasisWithAdaptiveUnset(534);
 
   &:after {
     content: '';
@@ -65,10 +69,6 @@
 
 .rightFooter {
   display: flex;
-
-  // & > div:nth-child(1) {
-  //   padding-top: size(30);
-  // }
 
   & > div {
     flex-basis: 50%;

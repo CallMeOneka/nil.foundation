@@ -16,8 +16,6 @@
 
 .left,
 .right {
-  width: 50%;
-
   @include mobile {
     width: 100%;
   }
@@ -26,6 +24,8 @@
 .right {
   position: relative;
   margin-top: size(350);
+
+  @include flexBasisWithAdaptiveUnset(534);
 
   &:after {
     content: '';
@@ -44,6 +44,10 @@
   @include mobile {
     margin-top: 0;
   }
+}
+
+.left {
+  @include flexBasisWithAdaptiveUnset(551);
 }
 
 .content {
@@ -69,7 +73,11 @@
 
 .footer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: size(275) size(259);
+
+  @include mobile {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .button {

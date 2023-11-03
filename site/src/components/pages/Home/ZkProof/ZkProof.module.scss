@@ -69,12 +69,21 @@
   display: flex;
 
   & > div {
-    flex-basis: 50%;
+    flex-basis: size(259);
     background-color: $gray900;
+
+    @include mobile {
+      flex-basis: 50%;
+    }
   }
 
   & > div:first-child {
     margin-top: size(30);
+    flex-basis: size(275);
+
+    @include mobile {
+      flex-basis: 50%;
+    }
   }
 }
 
