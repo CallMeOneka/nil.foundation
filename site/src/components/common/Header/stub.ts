@@ -1,5 +1,6 @@
 export const links = {
   main: [
+    { name: 'zkSharding', link: '/zkSharding' },
     { name: 'Proof Market ', link: '/' },
     { name: 'zkLLVM Compiler', link: '/zkLLVM' },
   ],
